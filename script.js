@@ -1,15 +1,17 @@
 //your code here
-let regix=/\bthe\b|\ban\b|\ba\b/gi;
 
-console.log(arr.replace(regix,"$"));
+
+let sen =["The Virupaksha Temple","Victoria Memorial","Tajmahal"];
+let regix=/\bthe\b|\ban\b|\ba\b/gi;
 let jan=[];
 let map={};
 for(let i=0;i<sen.length;i++){
-    articellessArray = sen[i].replace(regix," ").trim();
+    let articellessArray = sen[i].replace(regix," ").trim();
+	articellessArray =articellessArray.replace(/  /g," ");
      jan.push(articellessArray);
      map[articellessArray] = sen[i];
 }
-
+jan.sort();
 let ans=[];
 
 for(let i of jan){
