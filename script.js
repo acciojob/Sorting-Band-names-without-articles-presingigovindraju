@@ -9,13 +9,12 @@ for(let i=0;i<sen.length;i++){
     let articellessArray = sen[i].replace(regix," ").trim();
 	articellessArray =articellessArray.replace(/  /g," ");
      jan.push(articellessArray);
+	  jan.sort();
      map[articellessArray] = sen[i];
 }
 jan.sort();
-let ans=[];
 
-for(let i of jan){
-    ans.push(map[i]);
+for(let i=0;i<jan.length;i++){
+    console.log(map[jan[i]]);
 }
 
-console.log(ans);
